@@ -66,12 +66,12 @@ h1 {
 }
 
 .numero {
-    background-color: #4CAF50;
+    background-color: #666;
     color: white;
 }
 
 .numero:hover {
-    background-color: #5cbf60;
+    background-color: #777;
 }
 
 .operador {
