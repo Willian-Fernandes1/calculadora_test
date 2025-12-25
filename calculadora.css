@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculadora {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.display {
+    margin-bottom: 20px;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    text-align: right;
+    padding: 0 15px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.linha {
+    display: flex;
+    gap: 10px;
+}
+
+.botao {
+    flex: 1;
+    height: 60px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.numero {
+    background-color: #666;
+    color: white;
+}
+
+.numero:hover {
+    background-color: #777;
+}
+
+.operador {
+    background-color: #ff9500;
+    color: white;
+}
+
+.operador:hover {
+    background-color: #ffb143;
+}
+
+.igual {
+    background-color: #2196F3;
+    color: white;
+}
+
+.igual:hover {
+    background-color: #42a5f5;
+}
+
+.botao:not(.numero):not(.operador):not(.igual) {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.botao:not(.numero):not(.operador):not(.igual):hover {
+    background-color: #f0f0f0;
+}
