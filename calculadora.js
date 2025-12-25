@@ -11,12 +11,22 @@ function adicionarNumero(numero) {
     // Se o resultado foi calculado e um novo número é digitado, limpa o display
     if (resultadoCalculado) {
         display.value = '';
+        valorAtual = '';
+        valorAnterior = '';
+        operador = '';
         resultadoCalculado = false;
     }
     
-    // Adiciona o número ao display
-    display.value += numero;
-    valorAtual = display.value;
+    // Se já existe um operador, estamos digitando o segundo valor
+    if (operador !== '' && valorAnterior !== '') {
+        valorAtual += numero;
+        // Mostra a expressão completa: valor anterior + operador + valor atual
+        display.value = valorAnterior + ' ' + operador + ' ' + valorAtual;
+    } else {
+        // Estamos digitando o primeiro valor
+        valorAtual += numero;
+        display.value = valorAtual;
+    }
 }
 
 // Função para adicionar operador
@@ -28,7 +38,8 @@ function adicionarOperador(op) {
         valorAnterior = valorAtual;
         valorAtual = '';
         operador = op;
-        display.value = '';
+        // Mantém a expressão completa no display (valor anterior + operador)
+        display.value = valorAnterior + ' ' + op + ' ';
         resultadoCalculado = false;
     }
 }
@@ -79,8 +90,8 @@ function calcular() {
                 break;
         }
         
-        // Exibe o resultado
-        display.value = resultado;
+        // Exibe a expressão completa seguida do resultado
+        display.value = valorAnterior + ' ' + operador + ' ' + valorAtual + ' = ' + resultado;
         valorAtual = resultado.toString();
         operador = '';
         valorAnterior = '';
