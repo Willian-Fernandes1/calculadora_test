@@ -6,97 +6,119 @@
 }
 
 body {
-    background-color: #f0f0f0;
+    background-color: #1a1a2e;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
 }
 
 .calculadora {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    width: 300px;
+    background-color: #0f3460;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    width: 320px;
+    border: 1px solid #16213e;
 }
 
 h1 {
-    color: white;
+    color: #e94560;
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
+    margin-bottom: 25px;
+    font-size: 28px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .display {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 #display {
     width: 100%;
-    height: 60px;
-    font-size: 24px;
+    height: 70px;
+    font-size: 28px;
     text-align: right;
-    padding: 0 15px;
-    background-color: #444;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    padding: 0 20px;
+    background-color: #16213e;
+    color: #ffffff;
+    border: 2px solid #0f3460;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .botoes {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .linha {
     display: flex;
-    gap: 10px;
+    gap: 12px;
 }
 
 .botao {
     flex: 1;
-    height: 60px;
-    font-size: 20px;
+    height: 65px;
+    font-size: 22px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .numero {
-    background-color: #4CAF50;
+    background-color: #e94560;
     color: white;
 }
 
 .numero:hover {
-    background-color: #5cbf60;
+    background-color: #ff5a76;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(233, 69, 96, 0.3);
 }
 
 .operador {
-    background-color: #ff9500;
-    color: white;
+    background-color: #0f3460;
+    color: #e94560;
+    border: 2px solid #16213e;
 }
 
 .operador:hover {
-    background-color: #ffb143;
+    background-color: #1a1a2e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(233, 69, 96, 0.3);
 }
 
 .igual {
-    background-color: #2196F3;
+    background-color: #533483;
     color: white;
+    grid-column: span 2;
 }
 
 .igual:hover {
-    background-color: #42a5f5;
+    background-color: #6a4c9c;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(83, 52, 131, 0.3);
 }
 
 .botao:not(.numero):not(.operador):not(.igual) {
-    background-color: #e0e0e0;
-    color: #333;
+    background-color: #16213e;
+    color: #ffffff;
+    border: 2px solid #0f3460;
 }
 
 .botao:not(.numero):not(.operador):not(.igual):hover {
-    background-color: #f0f0f0;
+    background-color: #1a1a2e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1);
+}
+
+.botao:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
